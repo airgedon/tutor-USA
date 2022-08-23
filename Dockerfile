@@ -17,4 +17,3 @@ ENV AUTHOR="devops"
 
 EXPOSE 8000
 
-CMD /code/start.sh
