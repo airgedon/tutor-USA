@@ -8,4 +8,4 @@ COPY . .
 
 RUN python -m pip install --upgrade pip setuptools wheel
 
-RUN pip install -r requirements.txt
+RUN pip install -r req.txt
