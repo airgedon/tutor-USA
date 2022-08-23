@@ -33,9 +33,7 @@ jobs:
 #       - name: Delete tutorial-usa_db_1 container
 #         run: |
 #           docker rm tutorial-usa_db_1
-      - name: Restart docker service
-        run : |
-          systemctl restart docker
+
           
       - name: Run Docker-Compose
         run: |
