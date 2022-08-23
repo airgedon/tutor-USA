@@ -35,7 +35,7 @@ jobs:
 #           docker rm tutorial-usa_db_1
       - name: Restart docker service
         run : |
-          sudo service docker restart
+          systemctl restart docker
           
       - name: Run Docker-Compose
         run: |
