@@ -13,10 +13,11 @@ jobs:
     runs-on: self-hosted
 
     steps:
-          
-      - name: Remove Volumes
-        run : |
-          rm -rfv data
+    
+      - name: Cleaning up the $GITHUB_WORKSPACE as root from a Docker image
+
+        run: find /__w/${{ github.event.tutor-USA }}/${{ github.event.tutor-USA }}/. -name . -o -prune -exec rm -rf -- {} + || true
+
           
       - uses: actions/checkout@v2
     
