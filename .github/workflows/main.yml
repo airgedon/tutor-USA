@@ -14,7 +14,7 @@ jobs:
 
     steps:
           
-      - name: Give permissions
+      - name: Remove Volumes
         run : |
           rm -rfv data
           
