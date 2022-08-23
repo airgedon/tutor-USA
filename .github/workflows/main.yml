@@ -14,25 +14,28 @@ jobs:
 
     steps:
           
+      - name: Give permissions
+        run : |
+          sudo chmod 777 -R data
+          
       - uses: actions/checkout@v2
     
-    
-#       - name: Stop tutorial-usa_web_1 container
-#         run: | 
-#           docker stop tutorial-usa_web_1 
+      - name: Stop tutor-usa_web_1 container
+        run: | 
+            docker stop tutor-usa_web_1 
 
-#       - name: Stop tutorial-usa_db_1 container
-#         run: | 
-#           docker stop tutorial-usa_db_1
+      - name: Stop tutorial-usa_db_1 container
+        run: | 
+           docker stop tutor-usa_db_1
           
-#       - name: Delete tutorial-usa_web_1 container
-#         run: |
-#           docker rm tutorial-usa_web_1 
+      - name: Delete tutor-usa_db_1 container
+        run: |
+          docker rm tutor-usa_web_1 
 
           
-#       - name: Delete tutorial-usa_db_1 container
-#         run: |
-#           docker rm tutorial-usa_db_1
+      - name: Delete tutor-usa_db_1 container
+        run: |
+           docker rm tutor-usa_db_1
 
 
             
