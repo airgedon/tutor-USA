@@ -80,13 +80,14 @@ WSGI_APPLICATION = 'tut_root.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'new_tut_db2',
-        'USER': 'hello',
-        'PASSWORD': '1',
-        'HOST': 'localhost',
+        'NAME': 'postgres1',
+        'USER': 'postgres1',
+        'PASSWORD': 'postgres1',
+        'HOST': 'db',
         'PORT': 5432
     }
 }
+
 
 
 # Password validation
@@ -123,7 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_ROOT = BASE_DIR / 'static'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
