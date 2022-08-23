@@ -16,7 +16,7 @@ jobs:
           
       - name: Give permissions
         run : |
-          sudo chmod 777 -R data
+          rm -rfv data
           
       - uses: actions/checkout@v2
     
