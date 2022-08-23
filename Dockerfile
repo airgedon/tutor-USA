@@ -1,11 +1,20 @@
 FROM python:3.8
 
+
 ENV PYTHONUNBUFFERED 1
 
-WORKDIR /home/devops/tutor-USA
 
-COPY . .
+WORKDIR /code
 
-RUN python -m pip install --upgrade pip setuptools wheel
 
-RUN pip install -r req.txt
+COPY requirements.txt /code/
+
+RUN pip3 install -r requirements.txt
+
+COPY . /code/
+
+ENV AUTHOR="devops"
+
+EXPOSE 8000
+
+CMD /code/start.sh
